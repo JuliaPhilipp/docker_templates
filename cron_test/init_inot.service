@@ -1,0 +1,9 @@
+[Unit]
+Description = This service will run inotifywait to monitor /code/observed_dir/ for incoming files and file changes
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/init_inot
+
+[Install]
+WantedBy=multi-user.target

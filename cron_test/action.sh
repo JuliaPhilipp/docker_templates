@@ -1,0 +1,1 @@
+echo "File modified on $(date +"%y%m%d") at $(date +"%H%M%S")" > file_logs.txt

@@ -1,0 +1,9 @@
+#*/5 * * * * echo "Hello world"
+#*/5 * * * * echo "Hello world" >> /var/log/cron.log 2>&1
+#*/5 * * * * /code/dummy.sh >> /code/test.log 2> /code/test.err
+
+# dummy script but mail to root to see how error messages work
+*/5 * * * * /code/dummy.sh
+
+MAILTO=root
+# An empty line is required at the end of this file for a valid cron file.
