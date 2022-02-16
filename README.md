@@ -8,3 +8,8 @@
 
 ## inot_test
 * testing using inotifywait to monitor directories for file changes
+
+```bash
+docker build -t inot_test .
+docker run -t -i -v /host_dir/to/be/observed/:/code/observed_dir inot_test
+```
