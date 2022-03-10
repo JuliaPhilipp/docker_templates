@@ -1,0 +1,21 @@
+version: "3.9"
+   
+services:
+  upload:
+    build: ./upload
+    volumes: 
+      - ~/Documents/TidyTuesday:/code/observed_dir
+
+  qc:
+    build: ./qc
+    volumes:
+      - ~/Documents/TidyTuesday:/code/observed_dir
+    depends_on:
+      - upload
+
+  cleanup:
+    build: ./cleanup
+    volumes:
+      - ~/Documents/TidyTuesday:/code/observed_dir
+    depends_on:
+      - upload
