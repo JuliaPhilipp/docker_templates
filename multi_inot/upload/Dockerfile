@@ -17,6 +17,7 @@ RUN chmod +x /code/action_A.sh
 RUN chmod +x /code/inot_A.sh
 
 RUN mkdir -p /code/observed_dir/
+RUN mkdir -p /code/log_dir/
 
 
 # Run the inotifywait script on container startup
